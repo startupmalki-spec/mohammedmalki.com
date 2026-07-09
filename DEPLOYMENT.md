@@ -14,13 +14,29 @@
 
 GitHub repo: https://github.com/startupmalki-spec/mohammedmalki.com
 
-## Vercel deployment steps
+## Vercel deployment status
+
+Deployed successfully on 2026-07-09.
+
+- GitHub: https://github.com/startupmalki-spec/mohammedmalki.com
+- Vercel project: `startupmalki-specs-projects/mohammedmalki.com`
+- Working preview/production alias: https://mohammedmalkicom.vercel.app
+- Custom domains added in Vercel but not yet DNS-configured:
+  - `mohammedmalki.com`
+  - `www.mohammedmalki.com`
+
+Verified:
+
+- `npm run build` passes locally.
+- Vercel build passed.
+- Preview renders the intended site.
+
+## Future Vercel deployment steps
 
 Requires Vercel account auth or token.
 
 ```bash
 cd /root/projects/mohammedmalki.com
-npx vercel login
 npx vercel --prod
 ```
 
