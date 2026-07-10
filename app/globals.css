@@ -36,12 +36,12 @@ img { max-width: 100%; display: block; }
 
 .signature-link {
   display: inline-block;
-  height: 50px;
+  height: 80px;
   line-height: 1;
 }
 
 .signature-logo {
-  height: 48px;
+  height: 76px;
   width: auto;
   display: block;
 }
