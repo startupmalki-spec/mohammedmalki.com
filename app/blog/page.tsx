@@ -19,7 +19,6 @@ export default function BlogPage() {
           <a href="/#writings">Writings</a>
         </nav>
       </header>
-      </header>
 
       <section className="hero" aria-labelledby="hero-title">
         <h1 id="hero-title">Notes, Ideas, Discoveries.</h1>
