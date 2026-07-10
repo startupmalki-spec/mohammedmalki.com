@@ -18,11 +18,12 @@ a { color: inherit; text-decoration: none; }
 img { max-width: 100%; display: block; }
 
 .wix-page {
-  width: min(1168px, 100vw);
+  width: 100%;
+  max-width: 100vw;
   min-height: 100vh;
   background: #000;
   color: #fff;
-  overflow: hidden;
+  margin: 0 auto;
 }
 
 .site-header {
@@ -33,12 +34,14 @@ img { max-width: 100%; display: block; }
   padding: 0 160px 0 174px;
 }
 .signature {
-  font-family: "Brush Script MT", "Segoe Script", "Apple Chancery", cursive;
-  font-size: 43px;
+  font-family: 'Brush Script MT', 'Segoe Script', 'Bradley Hand', 'Comic Sans MS', cursive;
+  font-size: 48px;
   line-height: 1;
   color: #fff;
-  letter-spacing: .01em;
-  font-weight: 400;
+  letter-spacing: .03em;
+  font-weight: 700;
+  font-style: normal;
+  text-shadow: 0 0 1px rgba(255,255,255,0.3);
 }
 .site-header nav a {
   font-size: 15px;
@@ -54,20 +57,20 @@ img { max-width: 100%; display: block; }
   padding-bottom: 26px;
 }
 .hero h1 {
-  font-family: Georgia, 'Times New Roman', serif;
-  font-size: 33px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 34px;
   line-height: 1.2;
   margin: 0;
   font-weight: 400;
-  letter-spacing: -.01em;
+  letter-spacing: -.005em;
 }
 
 .writings {
   padding: 0 0 310px;
 }
 .writings h2 {
-  font-family: Georgia, 'Times New Roman', serif;
-  font-size: 33px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 34px;
   line-height: 1.1;
   font-weight: 400;
   font-style: italic;
@@ -97,12 +100,12 @@ img { max-width: 100%; display: block; }
 }
 .post-title {
   display: block;
-  font-family: Georgia, 'Times New Roman', serif;
-  font-size: 25px;
-  line-height: 1.13;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 24px;
+  line-height: 1.15;
   font-weight: 700;
   color: #fff;
-  letter-spacing: -.015em;
+  letter-spacing: -.02em;
   margin: 43px 0 17px;
 }
 .post-card:first-child .post-title { margin-top: 0; }
@@ -224,12 +227,13 @@ img { max-width: 100%; display: block; }
 }
 
 .post-page {
-  width: min(1168px, 100vw);
+  width: 100%;
+  max-width: 100vw;
   min-height: 100vh;
   background: #000;
   color: #fff;
-  overflow: hidden;
   padding-bottom: 90px;
+  margin: 0 auto;
 }
 .blog-shell {
   width: min(760px, calc(100% - 48px));
