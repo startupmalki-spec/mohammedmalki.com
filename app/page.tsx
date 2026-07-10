@@ -5,7 +5,9 @@ export default function Home() {
   return (
     <main className="wix-page">
       <header className="site-header">
-        <a className="signature" href="/" aria-label="Mohammed Malki home">Malki</a>
+        <a className="signature-link" href="/" aria-label="Mohammed Malki home">
+          <img src="/malki-logo.jpg" alt="Malki" className="signature-logo" />
+        </a>
         <nav aria-label="Site">
           <a href="#writings">Writings</a>
         </nav>

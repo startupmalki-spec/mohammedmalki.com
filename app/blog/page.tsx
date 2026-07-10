@@ -8,15 +8,17 @@ export const metadata: Metadata = {
 
 export default function BlogPage() {
   const posts = getAllPosts();
-
+  
   return (
     <main className="wix-page">
       <header className="site-header">
-        <a className="signature" href="/" aria-label="Mohammed Malki home">Malki</a>
+        <a className="signature-link" href="/" aria-label="Mohammed Malki home">
+          <img src="/malki-logo.jpg" alt="Malki" className="signature-logo" />
+        </a>
         <nav aria-label="Site">
-          <a href="/">Home</a>
-          <a href="/blog">Writings</a>
+          <a href="/#writings">Writings</a>
         </nav>
+      </header>
       </header>
 
       <section className="hero" aria-labelledby="hero-title">

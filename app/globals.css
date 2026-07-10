@@ -33,6 +33,20 @@ img { max-width: 100%; display: block; }
   justify-content: space-between;
   padding: 0 160px 0 174px;
 }
+
+.signature-link {
+  display: inline-block;
+  height: 50px;
+  line-height: 1;
+}
+
+.signature-logo {
+  height: 48px;
+  width: auto;
+  display: block;
+  filter: brightness(0) invert(1);
+}
+
 .signature {
   font-family: 'Shadows Into Light', 'Brush Script MT', 'Segoe Script', cursive;
   font-size: 56px;
