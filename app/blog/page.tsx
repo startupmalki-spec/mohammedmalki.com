@@ -13,7 +13,7 @@ export default function BlogPage() {
     <main className="wix-page">
       <header className="site-header">
         <a className="signature-link" href="/" aria-label="Mohammed Malki home">
-          <img src="/malki-logo-white.png" alt="Malki" className="signature-logo" />
+          <img src="/malki-logo-final.png" alt="Malki" className="signature-logo" />
         </a>
         <nav aria-label="Site">
           <a href="/#writings">Writings</a>
