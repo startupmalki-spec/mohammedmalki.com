@@ -1,130 +1,66 @@
-const notes = [
-  {
-    eyebrow: 'Building from Saudi',
-    title: 'A founder operating from the Saudi/GCC edge of AI, lending, and company-building.',
-    text: 'I care about the messy middle: how ideas move from raw thought to shipped systems, trusted products, and real momentum.',
-  },
-  {
-    eyebrow: 'Mugdm',
-    title: 'Managed AI agents for lending teams.',
-    text: 'At Mugdm, we are building human-governed digital coworkers that help lenders prepare, check, and move lending work without replacing judgment.',
-  },
-  {
-    eyebrow: 'Made by Malki',
-    title: 'Documenting the thinking while living the story.',
-    text: 'This site is the public home for what I am learning across strategy, product, design, growth, technology, systems, uncertainty, and meaning.',
-  },
-];
-
-const operatingThemes = [
-  'Ideas become reality through systems.',
-  'Momentum is designed, not wished for.',
-  'Uncertainty is where founder judgment compounds.',
-  'Taste matters because trust is felt before it is explained.',
-];
-
-const work = [
-  ['Founder', 'Mugdm — managed AI agents for lending workflows.'],
-  ['Ex-lender', 'SAMA and CMA environments shaped how I think about trust, operations, and regulated markets.'],
-  ['Builder', 'Product, strategy, design, systems, and distribution — connected into one operating rhythm.'],
-];
+import { getAllPosts } from '@/lib/posts';
 
 export default function Home() {
+  const posts = getAllPosts();
   return (
-    <main>
-      <section className="hero shell">
-        <nav className="nav" aria-label="Primary navigation">
-          <a className="mark" href="#top" aria-label="Mohammed Malki home">MM</a>
-          <div className="navLinks">
-            <a href="#work">Work</a>
-            <a href="#thinking">Thinking</a>
-            <a href="#contact">Contact</a>
-          </div>
+    <main className="wix-page">
+      <header className="site-header">
+        <a className="signature" href="/" aria-label="Mohammed Malki home">Malki</a>
+        <nav aria-label="Site">
+          <a href="#writings">Writings</a>
         </nav>
+      </header>
 
-        <div className="heroGrid" id="top">
-          <div className="heroCopy">
-            <p className="kicker">Mohammed Malki · Founder · Ex-Lender</p>
-            <h1>Ideas become reality through systems that create momentum.</h1>
-            <p className="lede">
-              I’m building from Saudi at the intersection of lending, AI agents, product, strategy, and public thinking.
-            </p>
-            <div className="actions">
-              <a className="primary" href="mailto:eng.mohammedmalki@gmail.com">Start a conversation</a>
-              <a className="secondary" href="#thinking">Read the thesis</a>
-            </div>
+      <section className="hero" aria-labelledby="hero-title">
+        <h1 id="hero-title">Notes, Ideas, Discoveries.</h1>
+      </section>
+
+      <section className="writings" id="writings" aria-labelledby="writings-title">
+        <h2 id="writings-title">Writings</h2>
+        <div className="post-grid">
+          {posts.map((post) => (
+            <article className="post-card" key={post.slug}>
+              <a className="post-image-link" href={`/post/${post.slug}`} aria-label={post.title}>
+                <img src={post.image} alt={post.imageAlt} />
+              </a>
+              <a className="post-title" href={`/post/${post.slug}`}>{post.title}</a>
+              <p>{post.excerpt}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <footer className="about-footer">
+        <div className="portrait-column">
+          <img className="portrait" src="/wix-assets/portrait.png" alt="Founder Portrait V1 (1).png" />
+          <div className="socials" aria-label="Social Bar">
+            <a href="http://mohammedmalki.substack.com" aria-label="substack_edited"><img src="/wix-assets/substack.png" alt="substack_edited" /></a>
+            <a href="https://x.com/mmalki27" aria-label="X"><img src="/wix-assets/x.png" alt="X" /></a>
+            <a href="https://www.linkedin.com/in/mohammed-malki/" aria-label="LinkedIn"><img src="/wix-assets/linkedin.png" alt="LinkedIn" /></a>
           </div>
-
-          <aside className="briefing" aria-label="Executive briefing card">
-            <div className="briefingTop">
-              <span>Public Identity</span>
-              <span>Riyadh · KSA</span>
-            </div>
-            <div className="orbit" aria-hidden="true">
-              <span></span><span></span><span></span>
-              <strong>Momentum</strong>
-            </div>
-            <p>
-              Strategy, growth, product, design, technology, and systems — connected by a simple question: how does an idea become real?
-            </p>
-          </aside>
         </div>
-      </section>
 
-      <section className="shell manifesto" id="thinking">
-        <p className="sectionLabel">Current thesis</p>
-        <h2>Thinking through the story while living it.</h2>
-        <p>
-          I use this space to turn raw founder thinking into public artifacts: essays, videos, notes, and operating principles. Some are about Mugdm. Some are about building from Saudi. Some are about momentum, uncertainty, and meaning.
-        </p>
-      </section>
+        <div className="bio-column">
+          <a className="bio-heading" href="/">Hey, I'm Mohammed.</a>
+          <p>I’m an aspiring founder and a generalist who enjoys exploring how ideas become reality. I take a holistic approach that blends strategy, growth, product, design, and technology ultimately building systems that create momentum.</p>
+          <p>An open-world and story-driven gamer at heart, who is passionate about navigating uncertainty, challenging limitations, and shaping meaning through experience.</p>
+          <p>This space is where I explore what I’m learning, what I’m thinking through, and the story I’m living along the way.</p>
 
-      <section className="shell cards" aria-label="Focus areas">
-        {notes.map((note) => (
-          <article className="card" key={note.eyebrow}>
-            <p>{note.eyebrow}</p>
-            <h3>{note.title}</h3>
-            <span>{note.text}</span>
-          </article>
-        ))}
-      </section>
-
-      <section className="split shell" id="work">
-        <div>
-          <p className="sectionLabel">Work</p>
-          <h2>Founder work, lender context, and public thinking in one place.</h2>
+          <form className="connect-form" action="mailto:eng.mohammedmalki@gmail.com" method="post">
+            <p className="connect-title">Let's Connect</p>
+            <label className="email-label">
+              <span>Email</span>
+              <input type="email" name="email" placeholder="Enter your email" required />
+            </label>
+            <label className="checkbox-label">
+              <input type="checkbox" defaultChecked />
+              <span>Get me early access to your newsletter.</span>
+            </label>
+            <button type="submit">Submit</button>
+          </form>
+          <p className="rights">© All Rights Reserved</p>
         </div>
-        <div className="timeline">
-          {work.map(([label, text]) => (
-            <div className="row" key={label}>
-              <strong>{label}</strong>
-              <p>{text}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="shell principles">
-        <p className="sectionLabel">Operating notes</p>
-        <div className="principleGrid">
-          {operatingThemes.map((theme, index) => (
-            <div className="principle" key={theme}>
-              <span>{String(index + 1).padStart(2, '0')}</span>
-              <p>{theme}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="contact shell" id="contact">
-        <p className="sectionLabel">Contact</p>
-        <h2>If the overlap is lending, AI agents, product, Saudi, or building with taste — reach out.</h2>
-        <div className="contactLinks">
-          <a href="mailto:eng.mohammedmalki@gmail.com">Email</a>
-          <a href="https://www.linkedin.com/in/mohammedmalki" target="_blank" rel="noreferrer">LinkedIn</a>
-          <a href="https://mugdm.com" target="_blank" rel="noreferrer">Mugdm</a>
-        </div>
-      </section>
+      </footer>
     </main>
   );
 }

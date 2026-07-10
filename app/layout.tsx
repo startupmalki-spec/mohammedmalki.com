@@ -2,12 +2,12 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Mohammed Malki — Ideas, systems, and momentum',
-  description: 'Personal site of Mohammed Malki: founder of Mugdm, ex-lender, and builder thinking through ideas, systems, momentum, and building from Saudi.',
+  title: 'Mohammed Malki',
+  description: 'Crafting your professional narrative with finesse.',
   metadataBase: new URL('https://mohammedmalki.com'),
   openGraph: {
     title: 'Mohammed Malki',
-    description: 'Ideas, systems, and momentum — from Saudi, through lending, AI, product, and company-building.',
+    description: 'Crafting your professional narrative with finesse.',
     url: 'https://mohammedmalki.com',
     siteName: 'Mohammed Malki',
     type: 'website',
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Mohammed Malki',
-    description: 'Ideas, systems, and momentum — from Saudi, through lending, AI, product, and company-building.',
+    description: 'Crafting your professional narrative with finesse.',
   },
 };
 
